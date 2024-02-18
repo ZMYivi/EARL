@@ -3,8 +3,8 @@ import argparse
 def get_options(parser=argparse.ArgumentParser()):  
     
     parser.add_argument('--is_train', type=int, default=1, help='Set to False to inference.')
-    parser.add_argument('--symbols', type=int, default=300, help='vocabulary size.')  
-    parser.add_argument('--set_size', type=int, default=9, help='Size of each model layer.')  
+    parser.add_argument('--symbols', type=int, default=30000, help='vocabulary size.')  
+    parser.add_argument('--set_size', type=int, default=900, help='Size of each model layer.')  
     parser.add_argument('--max_length', type=int, default=60, help='Max length of response.')  
     parser.add_argument('--embed_units', type=int, default=300, help="Size of word embedding.")
     parser.add_argument('--units', type=int, default=512, help="Size of each model layer.")
