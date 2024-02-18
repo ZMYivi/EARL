@@ -1,16 +1,10 @@
-import config
+from config import _START_VOCAB, get_options
 
 import argparse
 import json
 
 import nltk
 import numpy as np
-
-PAD_ID = 0
-UNK_ID = 1
-GO_ID = 2
-EOS_ID = 3
-_START_VOCAB = ['_PAD', '_UNK', '_GO', '_EOS']
 
 kb = {}
 
@@ -126,6 +120,6 @@ def build_vocab(opt, path, data):
     return vocab_list, embed
 
 if __name__ == '__main__':
-    opt = config.get_options()
+    opt = get_options()
     data_train, data_valid, data_test_seen, data_test_unseen = load_data(opt, 'data.json')
     vocab, embed = build_vocab(opt, opt.data_dir + '/vector.txt', data_train)

@@ -1,5 +1,11 @@
 import argparse
 
+PAD_ID = 0
+UNK_ID = 1
+GO_ID = 2
+EOS_ID = 3
+_START_VOCAB = ['_PAD', '_UNK', '_GO', '_EOS']
+
 def get_options(parser=argparse.ArgumentParser()):  
     
     parser.add_argument('--is_train', type=int, default=1, help='Set to False to inference.')
